@@ -1,5 +1,16 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" VIM configuration with Mac OS support
+" VIM configuration
+" 
+" This is my configuration file for vim. I adapted it to be used
+" as a tutorial based on different websites. It includes:
+"  - Basic commands to understand and use vim efficientely
+"  - Basic buffer and window splits manipulations (to be done)
+"  - Miscellaneous maps and commands (to be done)
+"  - Plugins description and details (to be done)
+"
+"  The sections are followed by the respective configuration and
+"  specific commands. For plugins, the commands are near the 
+"  plugin configurations.
 "
 " Author  : lflrsilva
 " Date    : Nov, 25th, 2017
