@@ -1,8 +1,19 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " VIM configuration with Mac OS support
 "
+" Author  : lflrsilva
+" Date    : Nov, 25th, 2017
+" Updates : Mar, 20th, 2018
+"
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"
 " # How to use vim efficiently
-" 
+" There are 4 steps to master vim:
+" 1. Survive
+" 2. Fell confortable
+" 3. Fell better, stronger, faster
+" 4. Use vim superpowers
+"
 " ## understand vim modes
 " - Normal : command insertion with keys or key combinations
 " - Visual : text selection <v>, block selection <c-v> or line selection <s-v>
@@ -53,7 +64,8 @@
 " #     : same as above, except it moves the cursor to the previous occurance
 " /text : starting from the cursor, find the next occurance of the string text
 "         and go to it. You will need to press Enter to execute the search.
-"         To re-execute your last search, type n (for next occurance)
+"         To re-execute your last search, type n (for next occurance) or N
+"         (for previous occurance)
 " ?text : same as /, but searches in the opposite direction
 " ma    : make a bookmark named a at the current cursor position. A bookmark
 "         can be named any lowercase letter. You can't see the bookmark, but
@@ -84,23 +96,48 @@
 " P          : paste before cursor
 " yy         : yank (copy) line
 " yw         : yank (copy) word
+" y)         : yank (copy) until end of sentence
 " y<command> : yank (copy) text moved by <command>
+"
+" ## undo/redo
+" u     : undo last command
+" <c-r> : redo last command
+" 
+" ## autocompletion options (insert mode)
+" <c-n>/<c-p> : complete with registered words
+" <c-x> <c-l> : complete with registered line
+" :set dictionary=/directory_for_dic
+" <c-x> <c-k> : dictionary completion
+" 
+" ## saving and open files
+" :w          : write (save) current open file
+" :w filename : write (save) current open file with filename name
+" :e filename : open file with filename name
+"
+" Ps.: you can go through directories to find specific files. in addition,
+"      autocompletion with <tab> is possible.
+"
+" ## quiting vim
+" :q  : quit vim (does not save file!)
+" :q! : quit vim imediatetly (does not save file!)
+" ZZ  : quit vim imediatetly and save file
 "
 " # References
 " http://robertames.com/files/vim-editing.html
 " http://www.radford.edu/~mhtay/CPSC120/VIM_Editor_Commands.htm
 " https://www.keycdn.com/blog/vim-commands/
+" http://yannesposito.com/Scratch/en/blog/Learn-Vim-Progressively/
 "
 " # Motivational references
 " http://yehudakatz.com/2010/07/29/everyone-who-tried-to-convince-me-to-use-vim-was-wrong/
 " http://www.websiterepairguy.com/articles/vi/12_learn_vi.html
 " https://csswizardry.com/2014/06/vim-for-people-who-think-things-like-vim-are-weird-and-hard/
 "
-" Author  : lflrsilva
-" Date    : Nov, 25th, 2017
-" Uptates : Mar, 20th, 2018
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
+" Starting VIM configuration
+"
+" General configurations
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Check OS
 function! GetRunningOS()
   if has("win32")
@@ -182,6 +219,8 @@ set tm=500
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Colors and Fonts
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" highlight current line
+set cursorline
 
 " column delimiter position
 set colorcolumn=80
