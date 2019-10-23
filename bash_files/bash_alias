@@ -1,0 +1,58 @@
+# Limpar a tela (adapata Matlab e DOS)
+   alias clc='clear'
+   alias cls='clear'
+# Eliminando configuracoes anteriores (necessario em alguns sistemas)
+   alias rm='rm'
+# Removendo arquivos e diretorios
+   alias rmr='rm -r' 
+# Removendo sem perguntas
+   alias rmf='rm -rf'
+# Copia recursiva
+   alias cp='cp -r'
+# Lista tarefas correntes de todos os usuarios
+   alias psa='ps aux'
+# Procura na lista de tarefas correntes
+   alias psas='ps auxw | grep -v grep| egrep --color=auto  -i'
+# kill "pra valer"
+   alias kill='kill -9'
+# listando arquivos, com cores e com diferentes opcoes
+   alias ls='ls -G --color'
+   alias l='ls -F'
+   alias ll='ls -lh' 
+   alias la='ls -lha' 
+# Limpar a tela antes de deslogar
+   alias exit="clear; exit"
+# Comando df com unidades simpaticas
+   alias df='df -h'  
+# Lista o mtab de forma elegante
+   alias mounted='mount|column -t'  
+# Alias para ver a hora e a data
+   alias hora='date +%H:%M:%S'  
+   alias data='date +%d/%m/%Y'
+   alias Invdata='date +%Y%m%d'
+   alias Extdata='date +%A,\ %d\ de\ %B\ de\ %Y'
+# Desmontar disco externo encriptado "cdisk".
+   alias uenc='encdisk -d'            
+# Converter arquivos ISO-8859-1 para UTF-8 e vice-versa
+   alias iso2utf='iconv -f iso-8859-1 -t utf-8'
+   alias utf2iso='iconv -f utf-8 -t iso-8859-1'
+# Convertendo os nomes dos arquivos ISO-8859-1 para UTF-8 e vice-versa
+   alias iso2utfnames='convmv -f iso-8859-1 -t utf-8'
+   alias utf2isonames='convmv -f utf-8 -t iso-8859-1'
+
+## Programas Mac OS {{{
+# Xcode to open source or text files from terminal
+#   alias xcode='open -a Xcode'
+# TextEdit
+#  alias textedit='/Applications/TextEdit.app/Contents/MacOS/TextEdit'
+# Mac Vim
+   # alias vim='/Applications/MacVim.app/Contents/MacOS/Vim -g --servername VIM'
+   alias mvim='/Applications/MacVim.app/Contents/MacOS/Vim -g --servername VIM'
+# Leitor de PDF
+   alias preview='/Applications/Preview.app/Contents/MacOS/Preview'
+# Revisor de PDF
+#   alias skim='/Applications/Skim.app/Contents/MacOS/Skim'
+# Leitor de Djview
+   alias djview='/Applications/DjView.app/Contents/MacOS/djview'
+# Maxima
+#  alias maxima='exec /Applications/Maxima.app/Contents/Resources/maxima.sh'

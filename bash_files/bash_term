@@ -1,0 +1,19 @@
+## Configurando PS1, PS2, PS3, PS4 e o PROMPT_COMMAND {{{
+#------------------------------------------------------------------------------
+# Configuracao do Prompt
+  export PS1="\u@\h:\W\$ "
+#   export PS2="continuando --->> "
+#   export PS3="#? "
+#   export PS4='$LINENO ++ '
+#------------------------------------------------------------------------------
+# Configuracao da Barra de titulo do xterm
+   case $TERM in
+    xterm*)
+      PROMPT_COMMAND='echo -ne "\033]0;$( ls -Al|sed "1d"| wc -l ) Itens \
+ - $( ls -Alh| grep -m 1 total| sed "s/total//" ): ${PWD}\007"' 
+     PROMPT_COMMAND='echo -ne "\033]0;$USER@$HOSTNAME: ${PWD}\007"' 
+     ;;
+    *) ;;
+   esac
+#------------------------------------------------------------------------------
+## }}}

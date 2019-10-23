@@ -1,0 +1,6 @@
+## Cluster connections
+alias ssh='ssh -X -l '
+alias marte='ssh marte.ltfd.ufrj.br'
+alias atlas='ssh atlas.ltfd.ufrj.br'
+alias login.arquimedes='ssh lflopes 146.164.68.133'
+

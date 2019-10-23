@@ -1,0 +1,45 @@
+## Python homebrew configuration
+PYTHONHOME=/usr/local/Cellar/python/3.7.4_1/Frameworks/Python.framework/Versions/3.7
+PYTHONPATH=$PYTHONHOME/bin
+
+## OpenFOAM
+# Paraview Mac OS installation
+export PATH=$PATH:/Applications/ParaView-5.5.2.app/Contents/MacOS
+
+# OpenFOAM
+if [ -e "$HOME/Applications/OpenFOAM/OpenFoam.sparsebundle" ]; then
+   alias of.mount='hdiutil attach -quiet -mountpoint "$HOME/Applications/opt/OpenFOAM" "$HOME/Applications/OpenFOAM/OpenFOAM.sparsebundle"'
+   alias ofdev='source ~/Applications/opt/OpenFOAM/OpenFOAM-dev/etc/bashrc'
+   alias paraFoam="paraFoam -builtin"
+   alias pf="touch case.foam && paraview --data=case.foam &"
+fi
+
+# Foam-extend
+if [ -e "$HOME/Applications/foam/foam.sparsebundle" ]; then
+  alias fe.mount='hdiutil attach -quiet -mountpoint "$HOME/Applications/opt/foam" "$HOME/Applications/foam/foam.sparsebundle"'
+  alias fe40='source ~/Applications/opt/foam/foam-extend-4.0/etc/bashrc'
+  alias paraFoam="paraFoam -builtin"
+  alias pf="touch case.foam && paraview --data=case.foam &"
+fi
+
+# Dakota
+#alias DAKOTA_INSTALL_DIR='/Users/lflrsilva/Applications/Dakota'
+#export PATH=$PATH:/Users/lflrsilva/Applications/Dakota/bin:/Users/lflrsilva/Applications/Dakota/test
+#export DYLD_LIBRARY_PATH=$DYLD_LIBRARY_PATH:/Users/lflrsilva/Applications/Dakota/lib:/Users/lflrsilva/Applications/Dakota/bin
+
+## Pointwise
+alias pwidserver='~/Applications/LicenseServer/macosx/rlm_control.sh'
+alias status.pwi.license='pwidserver status'
+alias start.pwi.license='pwidserver start'
+alias stop.pwi.license='pwidserver stop'
+
+## Linux apps
+# Bison, grep, sed, tar
+export PATH="/usr/local/opt/gnu-tar/libexec/gnubin:$PATH"
+export PATH="/usr/local/opt/grep/libexec/gnubin:$PATH"
+export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
+export PATH="/usr/local/opt/bison/bin:$PATH"
+
+# Carregando fzf e z, caso existam
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+[ -f /usr/local/etc/profile.d/z.sh ] && source /usr/local/etc/profile.d/z.sh

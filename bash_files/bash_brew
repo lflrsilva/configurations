@@ -1,0 +1,30 @@
+## Brew bash-completion
+[ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion
+
+## Comandos Homebrew {{{
+export PATH="$(brew --prefix coreutils)/libexec/gnubin:/usr/local/bin:$PATH"
+
+## Comandos Mac Ports {{{
+   # sudo permission
+#   alias port='sudo port'
+   # package installation
+#   alias port.ins='port install'
+   # check package dependencies
+#   alias port.ins.dep='port dependents'
+   # uninstall package
+#   alias port.rm='port uninstall'
+
+# Procurar pacotes disponiveis com palavras-chave e informacoes
+#   alias port.search='port search'
+#   alias port.info='port info'
+
+# Update dos repositorios
+#   alias port.update='port -v selfupdate'
+
+# Upgrade dos pacotes
+#   alias port.upgrade='port upgrade outdated'
+#   alias port.show.outdated='port list outdated'
+
+# Limpar instalacao quebrada
+#   alias port.clean.upgrade='port clean --all'
+

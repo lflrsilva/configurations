@@ -1,0 +1,43 @@
+## Configurando cores para o terminal {{{
+#------------------------------------------------------------------------------
+export CLICOLOR=1
+export LSCOLORS=GxFxCxDxBxegedabagaced
+
+# Definindo cores com nomes amigaveis
+   # export NORMAL="\\033[0m"
+# Cores sem negrito /  Cores em negrito
+   # export cinza="\\033[30m";    export CINZA="\\033[30;1m"
+   # export vermelho="\\033[31m"; export VERMELHO="\\033[31;1m"
+   # export verde="\\033[32m";    export VERDE="\\033[32;1m"
+   # export amarelo="\\033[33m";  export AMARELO="\\033[33;1m"
+   # export azul="\\033[34m";     export AZUL="\\033[34;1m"
+   # export roxo="\\033[35m";     export ROXO="\\033[35;1m"
+   # export ciano="\\033[36m";    export CIANO="\\033[36;1m"
+   # export branco="\\033[37m";   export BRANCO="\\033[37;1m"
+#------------------------------------------------------------------------------
+# Definindo cores para as paginas de manual
+#  begin blinking (algo piscante)
+   # export LESS_TERMCAP_mb=$'\E[01;31m'
+#  begin bold (elementos que originalmente sao negrito)
+   # export LESS_TERMCAP_md=$'\E[01;33m'
+#  end mode (volta ao texto normal)
+   # export LESS_TERMCAP_me=$'\E[0m'
+#  begin standout-mode - info box (barra de status)
+   # export LESS_TERMCAP_so=$'\E[01;41;37m'
+#  end standout-mode ("finaliza" barra de status)
+   # export LESS_TERMCAP_se=$'\E[0m'
+#  begin underline (elementos que originalmente era sublinhados)
+   # export LESS_TERMCAP_us=$'\E[01;32m'
+#  end underline (volta ao texto normal dos elementos sublinhados)
+   # export LESS_TERMCAP_ue=$'\E[0m'
+#------------------------------------------------------------------------------
+# Cor do grep, quando esse usa a opcao --color=auto (1;33, negrito/amarelo)
+   # export GREP_COLOR="1;33"
+#------------------------------------------------------------------------------
+# Definicao de cores do comando 'ls'
+# As cores podem ser obtidas atraves do comando `dircolors -p > .coloursrc`
+# Isso captura informacoes de configuracao basica nao usadas no sistema.
+# O comando abaixo, basicamente, define a variavel LC_COLORS.
+#   [ -f ~/.colourrc ] &&  eval `gdircolors -b ~/.colourrc` 
+#------------------------------------------------------------------------------
+## }}}

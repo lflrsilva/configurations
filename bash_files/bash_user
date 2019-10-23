@@ -1,0 +1,13 @@
+# Nome de usuario
+export USERNAME="Luiz Fernando L. R. Silva"
+export MYUSER=lflrsilva
+export MYGROUP=users
+# Instituicao de vinculo
+export INST="Universidade Federal do Rio de Janeiro"
+# e-mails em ordem de preferencia
+export MAIL01="lflopes@eq.ufrj.br"
+export MAIL02="lflrsilva@gmail.com"
+# URLs relevantes
+export URL01="http://www.notasemcfd.com"
+# Localizacao e instituicao de vinculo (departamento/lab, etc)
+export LOC="Departamento de Engenharia Quimica (EQ/UFRJ)"
